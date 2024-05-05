@@ -1,11 +1,9 @@
 [package]
 name = "iced_phosphor"
 version = "0.0.1"
-authors = [
-    "Jake Jarrett <jakeryanjarrett@gmail.com>",
-]
+authors = ["Jake Jarrett <jakeryanjarrett@gmail.com>",]
 edition = "2021"
-description = "Additional widgets for the Iced GUI library"
+description = "Phosphor Icons for Iced"
 license = "MIT"
 repository = "https://github.com/jakejarrett/iced-phosphor"
 # TODO documentation
@@ -38,3 +36,7 @@ members = [
 version = "0.12.1"
 default-features = false
 features = ["advanced"]
+
+[workspace.dependencies.iced_phosphor]
+path = "./"
+default-features = false
