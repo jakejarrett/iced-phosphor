@@ -1,0 +1,40 @@
+[package]
+name = "iced_phosphor"
+version = "0.0.1"
+authors = [
+    "Jake Jarrett <jakeryanjarrett@gmail.com>",
+]
+edition = "2021"
+description = "Additional widgets for the Iced GUI library"
+license = "MIT"
+repository = "https://github.com/jakejarrett/iced-phosphor"
+# TODO documentation
+readme = "README.md"
+keywords = ["interface", "iced", "phosphor", "icons"]
+categories = ["gui"]
+
+[features]
+## TODO: Add FF for Only using Thin/Light etc.
+light = []
+icons = []
+
+[dependencies]
+cfg-if = "1.0"
+
+[dependencies.iced]
+version = "0.12.1"
+default-features = false
+features = ["advanced"]
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[workspace]
+members = [
+    "examples/font_loading",
+]
+
+[workspace.dependencies.iced]
+version = "0.12.1"
+default-features = false
+features = ["advanced"]
